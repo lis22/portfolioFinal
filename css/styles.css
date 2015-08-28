@@ -1,0 +1,366 @@
+body {
+  color: black;
+  font-size: 1em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+/**********************CENTERED CONTAINER ************************************/
+.parent-container {
+  margin: 0 auto;
+}
+
+
+/*************************HEADER SECTION *********************************/
+.header-text {
+  display: block;
+  text-transform: uppercase;
+}
+
+/* removes spacing between Lisa Marie and Web Developer */
+.header-name, .header-webdev {
+  margin: 0;
+  text-align: left;
+}
+
+.header-webdev {
+  color: #838994;
+}
+/*************************NAVIGATION IN HEADER ******************************/
+
+/** navigation right side links **/
+.top-navigation  .nav-links {
+  float: right;
+}
+.top-navigation .nav-links {
+  list-style-type: none;
+}
+
+.top-navigation .nav-links  li {
+  display: inline-block;
+
+}
+.top-navigation .nav-links li a {
+  color: #838994;
+  text-decoration: none;
+}
+
+/*changes color and cursor when hoving over nav links **/
+.top-navigation  .nav-links  a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+/********************* IMAGES SECTION************************************/
+/****** ANIMATION FROM http://css3.bradshawenterprises.com/cfimg/ ******/
+.child-container {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+
+
+.child-container img {
+  left: 0;
+  position: absolute;
+  animation-name: cycleimages;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+
+}
+
+
+@keyframes cycleimages {
+  0% {
+    opacity:1;
+  }
+  12% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+.child-container img:nth-of-type(1) {
+  animation-delay: 6s;
+
+}
+.child-container img:nth-of-type(2){
+  animation-delay: 4s;
+}
+
+.child-container img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.child-container img:nth-of-type(4) {
+  animation-delay: 0;
+}
+
+
+
+/********************* FOOTER SECTION*****************************************/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+
+footer h6 {
+  text-align: center;
+  clear: both;
+}
+
+
+/* grey line seperator */
+footer hr {
+  border: 1px solid #eaebec;
+
+}
+
+
+/************************** ABOUT ME *****************************************/
+.about-me h1 {
+
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+
+.about-me .column1 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 50;
+}
+
+
+/************************** PORTFOLIO *****************************************/
+.portfolio  h1{
+
+  font-family: "Gentium Book Basic", Georgia, serif;
+  text-align: center;
+  font-weight: 100;
+
+}
+
+.portfolio h2 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 300;
+
+}
+
+.portfolio .column1, .column2 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-weight: 50;
+  display: block;
+
+}
+.portfolio .project {
+  background-color: #f2f3f4;
+  text-align: center;
+}
+
+.portfolio .project p {
+  text-align: left;
+}
+
+
+/******************************RESPONSIVE SECTION*****************************/
+@media screen and (min-width: 300px) {
+  .parent-container {
+    width: 100%;
+    padding: 0 0.2em;
+  }
+
+  header{
+    height: 8em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+  .header-text {
+    font-size: .8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+  }
+  .top-navigation {
+    .margin-right: 1%;
+  }
+
+  .top-navigation  .nav-links {
+    font-size: 1em;
+    margin: 0 2% 2% 2%;
+  }
+
+  .top-navigation .nav-links  li {
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+
+  .child-container {
+    width: 100%;
+  }
+
+  .child-container img {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  footer h6 {
+    font-size: .65em;
+  }
+
+  .portfolio  h1, .about-me h1 {
+
+    font-size: 1.5em;
+  }
+  .portfolio  h2 {
+
+    font-size: 1.2em;
+  }
+
+  .portfolio .column1, .column2 {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .portfolio img, .about-me img {
+    max-width: 100%;
+    height: auto;
+  }
+  .portfolio .project p {
+    margin: 3%;
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+
+  .parent-container {
+    width: 90%;
+  }
+
+  .child-container {
+    width: 95%;
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+
+  .parent-container {
+    width: 80%;
+  }
+
+  .child-container {
+    width: 90%;
+  }
+
+  .header-text {
+    float: left;
+  }
+
+  header {
+    height: 10em;
+  }
+
+  .header-text {
+    font-size:1em;
+  }
+
+  .top-navigation  .nav-links {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .parent-container {
+    width: 85%;
+  }
+
+  .child-container {
+    width: 85%;
+  }
+
+  .portfolio .column1 {
+    float: left;
+  }
+
+  .portfolio .column2 {
+    float: right;
+  }
+  .portfolio .project {
+    height: 30.5em;
+  }
+
+  .portfolio .project p {
+    margin: 3%;
+  }
+
+  .portfolio .column1, .column2 {
+    width: 48%;
+    padding-bottom: 2em;
+  }
+
+  .about-me .column1 {
+    float: left;
+    width: 48%;
+  }
+
+  .about-me .column2 {
+    float: right;
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .parent-container {
+    width: 60%;
+  }
+
+  .child-container {
+    width: 80%;
+  }
+  header {
+    height: 12em;
+  }
+
+  .header-text {
+    font-size:1em;
+  }
+
+  .top-navigation  .nav-links {
+    font-size: 1.1em;
+  }
+
+  .portfolio  h1, .about-me h1 {
+    font-size: 1.8em;
+  }
+  .portfolio  h2 {
+    font-size: 1.5em;
+  }
+
+  .portfolio .project {
+    height: 37.5em;
+  }
+}
